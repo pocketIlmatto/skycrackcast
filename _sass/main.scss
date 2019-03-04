@@ -1,0 +1,68 @@
+body {
+  background-size: contain;
+}    
+
+div {
+  border-radius: 5px;
+}
+
+div .group-box {
+  clear:left;
+  float:left;
+    overflow: auto;
+    padding-bottom: 1%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+div .sitebox {
+  cursor: pointer;
+  clear:left;
+  float:left;
+  width: 680px;
+  margin-left:10px;
+  margin-top: 5px;
+}
+
+div .score {
+  float:left;
+  width:325px;
+  height: 35px;
+  background-color: none;
+}
+
+div .score img {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+#bottom {
+    clear: both;
+    position: relative;
+    height: 30px;
+    margin-top: -30px;
+}
+
+.go-ideal {float:left; width:35px; background-color: #21B33A; height:35px; margin-left:10px; padding:7px;} 
+.go-likely {float:left; width:35px; background-color:#FCEC0F; height:35px; margin-left:10px; padding:7px;}
+.go-maybe {float:left; width:35px; background-color:#C88717; height:35px; margin-left:10px; padding:7px;}
+.go-bad {float:left; width:35px; height:35px; background-color:#909090; margin-left:10px; padding:7px; color:#E1E1E1;}
+
+a:link {color:#dbe7f9;}
+a:visited {color:#dbe7f9;}
+a:hover {
+  color:#ccffcc;
+  text-decoration: none;
+}
+a:active {color:#dbe7f9;}
+
+p a {
+  color:#dbe7f9;
+}
+
+p a:hover {
+  color:#ccffcc;
+  text-decoration: none;
+}
+
+.title_site {float:left; font-size:large; margin-left:0px; color:white; background-color:slategray; width:200px; padding-left:10px; padding-right:20px; padding-top:5px; height:35px;}
+.title_blue {float:left; font-size:large; margin-left:0px; color:white; background-color:#6699CC; width:200px; padding-left:10px; padding-right:20px; padding-top:5px; height:35px;} 
