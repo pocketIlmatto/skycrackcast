@@ -7,7 +7,7 @@
   speedmin_ideal: 2
   speedmax_ideal: 8
   speedmin_edge: 0
-  speedmax_edge: 11;
+  speedmax_edge: 11
   dir_ideal: ['SW', 'WSW', 'W']
   dir_edge: ['SSW', 'SW', 'WSW', 'W', 'WNW']
 
@@ -254,7 +254,7 @@
   speedmin_ideal: 2
   speedmax_ideal: 7
   speedmin_edge: 0
-  speedmax_edge: 10;
+  speedmax_edge: 10
   dir_ideal: ['WSW', 'W']
   dir_edge: ['SW', 'WSW', 'W', 'WNW', 'NW']
 
@@ -267,7 +267,7 @@
   speedmin_ideal: 4
   speedmax_ideal: 7
   speedmin_edge: 3
-  speedmax_edge: 10;
+  speedmax_edge: 10
   dir_ideal: ['WSW', 'W', 'WNW']
   dir_edge: ['WSW', 'W', 'WNW']
 
@@ -280,7 +280,7 @@
   speedmin_ideal: 2
   speedmax_ideal: 7
   speedmin_edge: 3
-  speedmax_edge: 8; 
+  speedmax_edge: 8 
   dir_ideal: ['WSW', 'SW']
   dir_edge: ['WSW', 'W', 'SW']
 
@@ -293,7 +293,7 @@
   speedmin_ideal: 2
   speedmax_ideal: 7
   speedmin_edge: 0
-  speedmax_edge: 9; 
+  speedmax_edge: 9 
   dir_ideal: ['N', 'NNE', 'NNW']
   dir_edge: ['N', 'NNE', 'NE', 'NW', 'NNW']
 
@@ -371,7 +371,7 @@
   speedmin_ideal: 0
   speedmax_ideal: 6
   speedmin_edge: 0
-  speedmax_edge: 8; 
+  speedmax_edge: 8 
   dir_ideal: ['E', 'ENE']
   dir_edge: ['NE', 'ENE', 'E', 'ESE', 'SE']
 
@@ -397,7 +397,7 @@
   speedmin_ideal: 2
   speedmax_ideal: 7
   speedmin_edge: 0
-  speedmax_edge: 9; 
+  speedmax_edge: 9 
   dir_ideal: ['W', 'WNW', 'NW']
   dir_edge: ['WSW', 'W', 'WNW', 'NW', 'NNW']
 
@@ -436,7 +436,7 @@
   speedmin_ideal: 0
   speedmax_ideal: 6
   speedmin_edge: 0
-  speedmax_edge: 9; 
+  speedmax_edge: 9 
   dir_ideal: ['SSW', 'SW', 'WSW']
   dir_edge: ['S', 'SSW', 'SW', 'WSW', 'W']
 
@@ -449,7 +449,7 @@
   speedmin_ideal: 7
   speedmax_ideal: 11
   speedmin_edge: 5
-  speedmax_edge: 13;
+  speedmax_edge: 13
   dir_ideal: ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
   dir_edge: ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
 
@@ -501,7 +501,7 @@
   speedmin_ideal: 7
   speedmax_ideal: 11
   speedmin_edge: 6
-  speedmax_edge: 14;
+  speedmax_edge: 14
   dir_ideal: ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
   dir_edge: ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
 
@@ -553,6 +553,6 @@
   speedmin_ideal: 0
   speedmax_ideal: 7
   speedmin_edge: 0
-  speedmax_edge: 10;
+  speedmax_edge: 10
   dir_ideal: ['N', 'W', 'WNW', 'NW', 'NNW']
   dir_edge: ['N', 'NNE', 'WSW', 'W', 'WNW', 'NW', 'NNW']
