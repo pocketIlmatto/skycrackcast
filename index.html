@@ -1,0 +1,12 @@
+---
+layout: default
+title: Home
+---
+<div class="group-box">
+  {% for item in site.data.sites %}
+    <div id={{ item.id }} class="sitebox">
+      <div class="title_blue">{{item.name}}</div>
+      <div class="score" id={{item.id}}_score></div>
+    </div>
+  {% endfor %}
+</div>
