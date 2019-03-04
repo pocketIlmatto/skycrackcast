@@ -1,12 +1,13 @@
 ---
 ---
-function getForecast(site_score, lat, lng, hourstart, hourend, speedmin_ideal, speedmax_ideal, speedmin_edge, speedmax_edge, dir_ideal, dir_edge) {
+function getForecast(site_score, lat, lng, hourstart, hourend, speedmin_ideal, 
+  speedmax_ideal, speedmin_edge, speedmax_edge, dir_ideal, dir_edge) {
 
     $.ajax({
-    url: 'https://api.weather.gov/points/' + lat + ',' + lng + '/forecast/hourly',
-    dataType: 'json',
-    headers: {
-      'accept': 'application/json'
+      url: 'https://api.weather.gov/points/' + lat + ',' + lng + '/forecast/hourly',
+      dataType: 'json',
+      headers: {
+        'accept': 'application/json'
     },
     error: function (error) {
       console.log(error);
@@ -68,6 +69,8 @@ function getForecast(site_score, lat, lng, hourstart, hourend, speedmin_ideal, s
         if (thehour == '00') {
 
           // console.log("BREAK start a new day here")
+          // console.log(`Green ${greeno}`)
+          // console.log(`Yellow ${yellowo}`)
           // day is over, add up for previous day 
           if (greeno >= 3) {
             therow = therow.concat('<div class="go-ideal">'+weekday[todaynum]+'</div>');
@@ -109,7 +112,7 @@ function getForecast(site_score, lat, lng, hourstart, hourend, speedmin_ideal, s
       } // end for loop 
 
       $('#'+site_score).append(therow);
-      console.log(site_score);
+      // console.log(site_score);
       
     } // end success function
 
@@ -121,12 +124,32 @@ $(document).ready(function() {
 
   console.log('\n\n\nDocument ready \n');
 
-  var sites = {{ site.data.sites | jsonify }}
-  
-  for (item of sites) {
-     getForecast(`${item.id}_score`, item.lat, item.lng, item.hourstart, 
-      item.hourend, item.speedmin_ideal, item.speedmax_ideal, 
-      item.speedmin_edge, item.speedmax_edge, item.dir_ideal, item.dir_edge);
-  }
+  $.ajax({
+    url: 'https://dry-caverns-42876.herokuapp.com/fly_sites',
+    dataType: 'json',
+    headers: {
+      'accept': 'application/json'
+    },
+    error: function (error) {
+      console.log(error);
+    },
+    success: function (thedata) {
+      // console.log(thedata);
+
+      for (item of thedata["data"]) {
+        item = item["attributes"];
+
+        var therow = '';
+        therow = therow.concat('<div id="'+item.name+'" class="sitebox">');
+        therow = therow.concat('<div class="title_blue">'+item.name+'</div>');
+        therow = therow.concat('<div class="score" id="'+item.slug+'_score"</div></div>'); 
+
+        $('#group-box').append(therow);
+        getForecast(`${item.slug}_score`, item.lat, item.lng, item.hourstart.toString(), 
+          item.hourend.toString(), item["speedmin-ideal"].toString(), item["speedmax-ideal"].toString(), 
+          item["speedmin-edge"].toString(), item["speedmax-edge"].toString(), item["dir-ideal"], item["dir-edge"]);
+      }
+    }
+  });
     
 }); // end document ready 
